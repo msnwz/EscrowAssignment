@@ -36,7 +36,7 @@ public class AddProductInAmazom {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-		// Navigate to the demo web shop registration page
+		// Navigate to the amazon
 		driver.get(url);
 
 		// search the product in search bar
