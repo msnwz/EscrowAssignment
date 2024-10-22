@@ -21,15 +21,6 @@ public class AddProductInAmazom {
 	@Test
 	public void amazon() throws IOException {
 
-		// Read properties from file
-		FileInputStream fis = new FileInputStream("./Testdata/amazondata.properties");
-
-		// step 2- create and object of respective file type
-		Properties ps = new Properties();
-
-		// call respective methods
-		ps.load(fis);
-		String url = ps.getProperty("url");
 
 		// Set up WebDriver
 		WebDriver driver = new ChromeDriver();
@@ -37,7 +28,7 @@ public class AddProductInAmazom {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		// Navigate to the amazon
-		driver.get(url);
+		driver.get("https://www.amazon.in/");
 
 		// search the product in search bar
 		WebElement searchtextfield = driver.findElement(By.id("twotabsearchtextbox"));
